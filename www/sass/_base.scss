@@ -1,0 +1,76 @@
+/**	
+ * Basic layout of the application:
+ */
+
+// everything has border-box boxsizing! Makes it easier and more predictable when doing layouting.
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    font-size: 100%;
+    display: flex;
+    display: -webkit-flex;
+    margin: 0;
+
+	> section {
+	    border-color: 2px dashed red;
+	}
+
+}
+
+@media (orientation:landscape){
+    
+    /*When in landscape orientation all the sections the body are aligned side by side */
+    body{
+        flex-direction: row;
+        -webkit-flex-direction: row;
+        padding-bottom: 3em;
+    }
+
+    body > section {
+    
+        flex: 1;
+        -webkit-flex: 1;
+    }
+}
+
+@media (orientation:portrait){
+    
+    /*When in portrait orientation all the sections the body are aligned on top of each other */
+    body{
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        padding-bottom: 4em;
+    }
+
+    body > section {
+    
+        flex: 1;
+        -webkit-flex: 1;
+    }   
+}
+
+/* might be usefull for the chripping anitmation of the cricket: */
+
+/*@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}*/

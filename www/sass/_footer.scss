@@ -1,0 +1,13 @@
+body > footer {
+
+    flex: none;
+    -webkit-flex: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    background-color: #444;
+    color: #eee;
+    font-size: 0.8em;
+}
