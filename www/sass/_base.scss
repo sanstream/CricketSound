@@ -12,15 +12,17 @@
 body {
     height: 100%;
     width: 100%;
- 	background-color: $colour-very-light-orange;
+ 	background-color: $colour-green;
     position: absolute;
-    font-size: 100%;
+    font-family: Purisa, Arial, sans-serif;
+    font-size: 120%;
     display: flex;
     display: -webkit-flex;
     margin: 0;
 
 	> section {
 	    border-color: 2px dashed red;
+        padding: 1em;
 	}
 
 }

@@ -1,0 +1,27 @@
+$border-width: 0.1rem;
+
+.cricket-control-centre > button {
+
+	margin: 1em auto;
+	border-radius: 0.4em;
+	background-color: $colour-orange;
+	border-bottom: $border-width solid darken($colour-orange, 30%);
+	border-right: $border-width solid darken($colour-orange, 30%);
+	border-top: $border-width solid lighten($colour-orange, 30%);
+	border-left: $border-width solid lighten($colour-orange, 30%);
+	line-height: 3em;
+	width: 100%; // should at least stretch to 70% of the screen width, but is allowed to be larger.
+	color: $colour-light-grey;
+	text-shadow: 1px 1px 1px $colour-dark-grey;
+	font-family: Purisa, Arial, sans-serif;
+	font-size: 1.1em;
+	display: block;
+
+	&:active {
+		outline: none;
+		border-bottom: $border-width solid lighten($colour-orange, 30%);
+		border-right: $border-width solid lighten($colour-orange, 30%);
+		border-top: $border-width solid darken($colour-orange, 30%);
+		border-left: $border-width solid darken($colour-orange, 30%);
+	}
+}

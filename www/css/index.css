@@ -12,14 +12,16 @@
 body {
   height: 100%;
   width: 100%;
-  background-color: #fffcf9;
+  background-color: #9de7d2;
   position: absolute;
-  font-size: 100%;
+  font-family: Purisa, Arial, sans-serif;
+  font-size: 120%;
   display: flex;
   display: -webkit-flex;
   margin: 0; }
   body > section {
-    border-color: 2px dashed red; }
+    border-color: 2px dashed red;
+    padding: 1em; }
 
 @media (orientation: landscape) {
   /*When in landscape orientation all the sections the body are aligned side by side */
@@ -72,5 +74,27 @@ body > footer {
   background-color: #444;
   color: #eee;
   font-size: 0.8em; }
+
+.cricket-control-centre > button {
+  margin: 1em auto;
+  border-radius: 0.4em;
+  background-color: #ff6725;
+  border-bottom: 0.1rem solid #8b2a00;
+  border-right: 0.1rem solid #8b2a00;
+  border-top: 0.1rem solid #ffd2be;
+  border-left: 0.1rem solid #ffd2be;
+  line-height: 3em;
+  width: 100%;
+  color: #eee;
+  text-shadow: 1px 1px 1px #444;
+  font-family: Purisa, Arial, sans-serif;
+  font-size: 1.1em;
+  display: block; }
+  .cricket-control-centre > button:active {
+    outline: none;
+    border-bottom: 0.1rem solid #ffd2be;
+    border-right: 0.1rem solid #ffd2be;
+    border-top: 0.1rem solid #8b2a00;
+    border-left: 0.1rem solid #8b2a00; }
 
 /*# sourceMappingURL=index.css.map */
