@@ -1,5 +1,7 @@
+/**
+ * All main footer related styling:
+ */
 body > footer {
-
     flex: none;
     -webkit-flex: none;
     position: absolute;
@@ -7,7 +9,7 @@ body > footer {
     left: 0;
     width: 100%;
     padding: 1em;
-    background-color: #444;
-    color: #eee;
+    background-color: $colour-dark-grey;
+    color: $colour-light-grey;
     font-size: 0.8em;
 }
