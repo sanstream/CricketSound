@@ -19,14 +19,13 @@
     <body ng-controller="Cricket">
             <section class="cricket-pen" >
                 
-                <h1>The Cricket</h1>
+                <h1 id="cricket" data-making-sound="{{ !isSilent }}">The Cricket</h1>
 
             </section>
 
             <section class="cricket-control-centre">
                 
-                <button>Make it stop!</button>
-                <button>Make it chrip</button>
+                <button ng-click="toggleCricketSound()">{{ buttonText }}</button>
 
             </section>
 
