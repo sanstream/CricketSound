@@ -1,11 +1,7 @@
 /**
- * @description Holds all the logic for the ChapterCtrl controller.
+ * @description Holds all the logic for the Criket app.
  * @author 		Sanne Peters
- * @copyright 	Sanstream Creations 2013  
- */
-
-/**
- * Definition of the ChapterCtrl Angular controller:
+ * @copyright 	Sanstream Creations 2015  
  */
 
 CricketSound.controller('Cricket',['$scope',
@@ -23,10 +19,33 @@ CricketSound.controller('Cricket',['$scope',
 			buttonText: "Make it chrip"	
 		};
 
-		
-		$scope.isSilent = false;
-		$scope.buttonText = whenActive.buttonText;
-		
+		/**
+		 * [description]
+		 * @return {[type]} [description]
+		 */
+		startChriping function () {
+
+			$scope.isSilent = false;
+			$scope.buttonText = whenActive.buttonText;	
+
+			// call to cordova API to play sound.
+		};
+
+		/**
+		 * [description]
+		 * @return {[type]} [description]
+		 */
+		stopChriping function () {
+
+			$scope.isSilent = true;
+			$scope.buttonText = whenInActive.buttonText;	
+
+			// call to cordova API to stop playing sound.
+		};
+
+		// initiate the app with a chriping cricket:
+		startChriping();
+
 		/**
 		 * Handles the result of the toggling action of the in-page index button
 		 * @return {void}
@@ -35,13 +54,11 @@ CricketSound.controller('Cricket',['$scope',
 
 			if($scope.isSilent){
 
-				$scope.isSilent = false;
-				$scope.buttonText = whenActive.buttonText;
+				startChriping();
 			}
 			else {
 
-				$scope.isSilent = true;
-				$scope.buttonText = whenInActive.buttonText;
+				stopChriping();
 			}
 		}
 	}
