@@ -16,13 +16,17 @@ body {
     position: absolute;
     font-family: Purisa, Arial, sans-serif;
     font-size: 120%;
+    margin: 0;
     display: flex;
     display: -webkit-flex;
-    margin: 0;
+    
+    .cricket{
+        display: flex;
+        display: -webkit-flex;
+    }
 
-	> section {
-	    border-color: 2px dashed red;
-        padding: 1em;
+	.cricket > section {
+	    padding: 1em;
 	}
 
 }
@@ -31,15 +35,17 @@ body {
     
     /*When in landscape orientation all the sections the body are aligned side by side */
     body{
-        flex-direction: row;
-        -webkit-flex-direction: row;
         padding-bottom: 3em;
-    }
 
-    body > section {
-    
-        flex: 1;
-        -webkit-flex: 1;
+        .cricket {
+            flex-direction: column;
+            -webkit-flex-direction: column;
+
+            section {
+                flex: 1;
+                -webkit-flex: 1;
+            }
+        }
     }
 }
 
@@ -54,8 +60,8 @@ body {
 
     body > section {
     
-        flex: 1;
-        -webkit-flex: 1;
+        // flex: 1;
+        // -webkit-flex: 1;
     }   
 }
 

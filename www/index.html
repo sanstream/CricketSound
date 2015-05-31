@@ -16,23 +16,30 @@
         <script type="text/javascript" src="js/controllers/Cricket.js"></script>
 
     </head>
-    <body ng-controller="Cricket">
-            <section class="cricket-pen" >
+    <body>
+            <div class="cricket" ng-controller="Cricket">
+                <section class="cricket-pen" ng-include="'templates/cricket.svg'" data-making-sound="{{ !isSilent }}"></section>
+
+                <section class="cricket-control-centre">
+                    
+                    <button ng-click="toggleCricketSound()">{{ buttonText }}</button>
+
+                </section>    
+            </div>
+
                 
-                <h1 id="cricket" data-making-sound="{{ !isSilent }}">The Cricket</h1>
-
-            </section>
-
-            <section class="cricket-control-centre">
-                
-                <button ng-click="toggleCricketSound()">{{ buttonText }}</button>
-
+            <section ng-controller="SoundInfo">
+                <p>
+                    <a ng-click='openPopUp' href="javascript:{}">Why is this app already making noise?</a>
+                </p>
+                <article class="popup {{ popup.state }}" id="why-this-is-funny" ng-include="'templates/whys-this-is-funny.html'"></article> 
             </section>
 
             <footer>
                 <section>Cricket Sound by Sanne Peters</section>
                 <section>Sanstream Creations &copy; 2015</section>
             </footer>
+            
     </body>
 </html>
     

@@ -23,7 +23,7 @@ CricketSound.controller('Cricket',['$scope',
 		 * [description]
 		 * @return {[type]} [description]
 		 */
-		startChriping function () {
+		function startChriping () {
 
 			$scope.isSilent = false;
 			$scope.buttonText = whenActive.buttonText;	
@@ -35,7 +35,7 @@ CricketSound.controller('Cricket',['$scope',
 		 * [description]
 		 * @return {[type]} [description]
 		 */
-		stopChriping function () {
+		function stopChriping () {
 
 			$scope.isSilent = true;
 			$scope.buttonText = whenInActive.buttonText;	

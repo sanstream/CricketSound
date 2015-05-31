@@ -1,0 +1,29 @@
+
+/**
+ * All the colour codes that are specific to the cricket.
+ */
+$cricket-light-brown: #e5b46c;
+$cricket-dark-brown: #655134;
+$cricket-murky-yellow: 2;
+$cricket-beige: 2;
+
+$standard-stroke-width: 7;
+$A4-ratio: 210/297;
+$animation-width: 100%;
+
+
+#cricket-animation {
+
+	height: $animation-width * $A4-ratio;
+   	width: $animation-width;
+	
+	path.general-body-part{
+		fill: $cricket-light-brown;
+		fill-rule:evenodd;
+		stroke: $cricket-dark-brown;
+		stroke-width: $standard-stroke-width;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke-miterlimit:4;
+	}
+}

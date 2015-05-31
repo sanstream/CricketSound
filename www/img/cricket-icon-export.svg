@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 222.27886 222.27884"
+   height="62.732029mm"
+   width="62.732029mm">
+  <title
+     id="title4136">The Cricket</title>
+  <defs
+     id="defs4">
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.2657446,0.14896105,-0.22962901,0.40965517,279.53011,630.70196)"
+       r="28.571428"
+       fy="809.43213"
+       fx="593.88269"
+       cy="809.43213"
+       cx="593.88269"
+       id="radialGradient4238"
+       xlink:href="#linearGradient4232" />
+    <linearGradient
+       id="linearGradient4232">
+      <stop
+         id="stop4234"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1" />
+      <stop
+         id="stop4236"
+         offset="1"
+         style="stop-color:#5f5f5f;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.25638759,0.13396265,-0.21748125,0.4162316,387.82678,644.17304)"
+       r="28.571428"
+       fy="799.12689"
+       fx="614.89874"
+       cy="799.12689"
+       cx="614.89874"
+       id="radialGradient4238-8"
+       xlink:href="#linearGradient4232" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>The Cricket</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Sanne Petes</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Sanstream Creations 2015</dc:title>
+          </cc:Agent>
+        </dc:rights>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-773.7922,-598.79788)"
+     id="layer1">
+    <path
+       id="path4142"
+       d="m 855.46764,629.20219 c -60.53694,10.61535 -60.79693,88.55724 -36.01545,116.02077 59.52971,65.97252 136.38141,55.25555 136.38141,55.25555 0,0 19.73492,-40.80806 -0.69309,-100.92559 -9.6438,-28.38072 -39.13594,-80.96607 -99.67287,-70.35073 z"
+       style="opacity:0.98999999;fill:#e5b46c;fill-opacity:1;fill-rule:evenodd;stroke:#655134;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       id="path4851"
+       d="m 870.25328,370.80936 c 0,0 -35.08451,88.55584 -34.25572,285.75537 0.0128,3.04908 -8.77918,5.68046 -8.76067,2.63141 1.2931,-212.91622 43.01639,-288.38678 43.01639,-288.38678 z"
+       style="fill:#e5b46c;fill-opacity:1;fill-rule:evenodd;stroke:#655134;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       id="path4851-5"
+       d="m 933.54601,379.31342 c 0,0 -35.94814,59.11768 -57.64789,255.12142 -0.33552,3.03058 -9.37052,4.64057 -9.00387,1.6136 25.60283,-211.37522 66.65176,-256.73502 66.65176,-256.73502 z"
+       style="fill:#e5b46c;fill-opacity:1;fill-rule:evenodd;stroke:#655134;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       id="path4264"
+       d="m 953.71057,797.52011 c -1.97304,-20.6589 -16.48447,-37.91038 -16.95441,-38.09549 -38.69339,11.66499 -33.80166,19.6593 -33.05022,35.49853"
+       style="fill:none;fill-rule:evenodd;stroke:#655134;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       id="path4266"
+       d="m 936.43931,759.36766 c 10.03147,-20.81601 27.83917,-12.10521 27.43002,-5.20937"
+       style="fill:none;fill-rule:evenodd;stroke:#655134;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <ellipse
+       transform="matrix(0.81778566,-0.57552291,0.57552291,0.81778566,0,0)"
+       ry="40.714283"
+       rx="28.571428"
+       cy="1075.5801"
+       cx="263.69556"
+       id="path4195"
+       style="opacity:1;fill:url(#radialGradient4238);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <ellipse
+       transform="matrix(0.81778566,-0.57552291,0.57552291,0.81778566,0,0)"
+       ry="40.714283"
+       rx="15.613487"
+       cy="1085.0841"
+       cx="375.94556"
+       id="path4195-6"
+       style="opacity:1;fill:url(#radialGradient4238-8);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+  <g
+     transform="translate(-773.7922,-290.53016)"
+     id="layer2" />
+</svg>

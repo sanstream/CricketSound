@@ -16,33 +16,31 @@ body {
   position: absolute;
   font-family: Purisa, Arial, sans-serif;
   font-size: 120%;
+  margin: 0;
   display: flex;
-  display: -webkit-flex;
-  margin: 0; }
-  body > section {
-    border-color: 2px dashed red;
+  display: -webkit-flex; }
+  body .cricket {
+    display: flex;
+    display: -webkit-flex; }
+  body .cricket > section {
     padding: 1em; }
 
 @media (orientation: landscape) {
   /*When in landscape orientation all the sections the body are aligned side by side */
   body {
-    flex-direction: row;
-    -webkit-flex-direction: row;
     padding-bottom: 3em; }
-
-  body > section {
-    flex: 1;
-    -webkit-flex: 1; } }
+    body .cricket {
+      flex-direction: column;
+      -webkit-flex-direction: column; }
+      body .cricket section {
+        flex: 1;
+        -webkit-flex: 1; } }
 @media (orientation: portrait) {
   /*When in portrait orientation all the sections the body are aligned on top of each other */
   body {
     flex-direction: column;
     -webkit-flex-direction: column;
-    padding-bottom: 4em; }
-
-  body > section {
-    flex: 1;
-    -webkit-flex: 1; } }
+    padding-bottom: 4em; } }
 /* might be usefull for the chripping anitmation of the cricket: */
 /*@keyframes fade {
     from { opacity: 1.0; }
@@ -96,5 +94,20 @@ body > footer {
     border-right: 0.1rem solid #ffd2be;
     border-top: 0.1rem solid #8b2a00;
     border-left: 0.1rem solid #8b2a00; }
+
+/**
+ * All the colour codes that are specific to the cricket.
+ */
+#cricket-animation {
+  height: 70.70707%;
+  width: 100%; }
+  #cricket-animation path.general-body-part {
+    fill: #e5b46c;
+    fill-rule: evenodd;
+    stroke: #655134;
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4; }
 
 /*# sourceMappingURL=index.css.map */
