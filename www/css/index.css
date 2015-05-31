@@ -109,5 +109,13 @@ body > footer {
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 4; }
+  #cricket-animation .bottom {
+    fill: #e7c99b;
+    fill-rule: evenodd;
+    stroke: #98815e;
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4; }
 
 /*# sourceMappingURL=index.css.map */

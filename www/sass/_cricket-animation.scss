@@ -4,8 +4,8 @@
  */
 $cricket-light-brown: #e5b46c;
 $cricket-dark-brown: #655134;
-$cricket-murky-yellow: 2;
-$cricket-beige: 2;
+$cricket-murky-yellow: #e7c99b;
+$cricket-beige: #98815e;
 
 $standard-stroke-width: 7;
 $A4-ratio: 210/297;
@@ -21,6 +21,16 @@ $animation-width: 100%;
 		fill: $cricket-light-brown;
 		fill-rule:evenodd;
 		stroke: $cricket-dark-brown;
+		stroke-width: $standard-stroke-width;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke-miterlimit:4;
+	}
+
+	.bottom{
+		fill: $cricket-murky-yellow;
+		fill-rule:evenodd;
+		stroke: $cricket-beige;	
 		stroke-width: $standard-stroke-width;
 		stroke-linecap:round;
 		stroke-linejoin:round;
