@@ -7,7 +7,7 @@
 CricketSound.controller('Cricket',['$scope',
  	function ($scope){
 
-		var whenActive = {
+		const __whenActive = {
 			buttonText: "Make it Stop!"
 		};
 
@@ -15,33 +15,36 @@ CricketSound.controller('Cricket',['$scope',
 		 * [inactive description]
 		 * @type {Object}
 		 */
-		var whenInActive = {
+		const __whenInActive = {
 			buttonText: "Make it chrip"	
 		};
 
-		var __maxDegreesOfMotion = 30;
+		const __maxDegreesOfMotion = 30;
 		var __coverShieldIsOpening = false;
-        var __frequency = 1000;
+        const __frequency = 1000;
 
         /**
-         *
+         * private chirp method that recursively calls itself until it needs to be silent.
+         * @return {void}
          */
         function chirp () {
             console.debug("move...");
 
             if(!$scope.isSilent)
                 setTimeout(chirp, __frequency);
-        };
+            else {
+                // turn off sound.
+            }
+        }
 
 		/**
-		 * [description]
+		 * initiates the chirp method and sets the right values.
 		 * @return {[type]} [description]
 		 */
-		function startChriping () {
+		function startChirping () {
 
 			$scope.isSilent = false;
-			$scope.buttonText = whenActive.buttonText;	
-
+			$scope.buttonText = __whenActive.buttonText;
 			// animate the cover shields:
 			chirp();
 			// call to cordova API to play sound.
@@ -51,16 +54,16 @@ CricketSound.controller('Cricket',['$scope',
 		 * [description]
 		 * @return {[type]} [description]
 		 */
-		function stopChriping () {
+		function stopChirping () {
 
 			$scope.isSilent = true;
-			$scope.buttonText = whenInActive.buttonText;
+			$scope.buttonText = __whenInActive.buttonText;
 
 			// call to cordova API to stop playing sound.
-		};
+		}
 
-		// initiate the app with a chriping cricket:
-		startChriping();
+		// initiate the app with a chirping cricket:
+		startChirping();
 
 		/**
 		 * Handles the result of the toggling action of the in-page index button
@@ -70,11 +73,11 @@ CricketSound.controller('Cricket',['$scope',
 
 			if($scope.isSilent){
 
-				startChriping();
+				startChirping();
 			}
 			else {
 
-				stopChriping();
+				stopChirping();
 			}
 		}
 	}
