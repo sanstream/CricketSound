@@ -59,3 +59,6 @@ node_modules/*
 .sass-cache/*
 www/css/index.css.map
 npm-debug.log
+
+#phpstorm stuff:
+.idea/
