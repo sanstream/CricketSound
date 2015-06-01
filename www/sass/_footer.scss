@@ -2,7 +2,7 @@
  * All main footer related styling:
  */
 body > footer {
-    flex: none;
+    flex: 0 none;
     -webkit-flex: none;
     position: absolute;
     bottom: 0;
@@ -12,4 +12,9 @@ body > footer {
     background-color: $colour-dark-grey;
     color: $colour-light-grey;
     font-size: 0.8em;
+
+    section{
+        display: inline-block;
+    }
 }
+

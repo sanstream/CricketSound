@@ -17,28 +17,25 @@
 
     </head>
     <body>
-            <div class="cricket" ng-controller="Cricket">
-                <section class="cricket-pen" ng-include="'templates/cricket.svg'" data-making-sound="{{ !isSilent }}"></section>
 
-                <section class="cricket-control-centre">
-                    
-                    <button ng-click="toggleCricketSound()">{{ buttonText }}</button>
+        <div class="cricket" ng-controller="Cricket">
+            <section class="cricket-pen" ng-include="'templates/cricket.svg'" data-making-sound="{{ !isSilent }}"></section>
 
-                </section>    
-            </div>
+            <section class="cricket-control-centre">                    
+                <button ng-click="toggleCricketSound()">{{ buttonText }}</button>
+            </section>    
+        </div>
+            
+        <section class="sound-info" ng-controller="SoundInfo">
+            <p>
+                <a ng-click='openPopUp' href="javascript:{}">Why is this app already making noise?</a>
+            </p>
+            <article class="popup {{ popup.state }}" id="why-this-is-funny" ng-include="'templates/whys-this-is-funny.html'"></article> 
+        </section>
 
-                
-            <section ng-controller="SoundInfo">
-                <p>
-                    <a ng-click='openPopUp' href="javascript:{}">Why is this app already making noise?</a>
-                </p>
-                <article class="popup {{ popup.state }}" id="why-this-is-funny" ng-include="'templates/whys-this-is-funny.html'"></article> 
-            </section>
-
-            <footer>
-                <section>Cricket Sound by Sanne Peters</section>
-                <section>Sanstream Creations &copy; 2015</section>
-            </footer>
+        <footer>
+            <section>Sanstream Creations &copy; 2015</section>
+        </footer>
             
     </body>
 </html>

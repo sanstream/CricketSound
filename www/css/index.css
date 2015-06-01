@@ -20,21 +20,24 @@ body {
   display: flex;
   display: -webkit-flex; }
   body .cricket {
+    -webkit-flex: 2;
+    flex: 2;
     display: flex;
-    display: -webkit-flex; }
-  body .cricket > section {
+    display: -webkit-flex;
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 1em; }
+    body .cricket > section {
+      padding: 1em; }
+  body .sound-info {
+    -webkit-flex: 1;
+    flex: 1;
     padding: 1em; }
 
 @media (orientation: landscape) {
   /*When in landscape orientation all the sections the body are aligned side by side */
   body {
-    padding-bottom: 3em; }
-    body .cricket {
-      flex-direction: column;
-      -webkit-flex-direction: column; }
-      body .cricket section {
-        flex: 1;
-        -webkit-flex: 1; } }
+    padding-bottom: 3em; } }
 @media (orientation: portrait) {
   /*When in portrait orientation all the sections the body are aligned on top of each other */
   body {
@@ -62,7 +65,7 @@ body {
  * All main footer related styling:
  */
 body > footer {
-  flex: none;
+  flex: 0 none;
   -webkit-flex: none;
   position: absolute;
   bottom: 0;
@@ -72,6 +75,8 @@ body > footer {
   background-color: #444;
   color: #eee;
   font-size: 0.8em; }
+  body > footer section {
+    display: inline-block; }
 
 .cricket-control-centre > button {
   margin: 1em auto;

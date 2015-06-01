@@ -21,14 +21,24 @@ body {
     display: -webkit-flex;
     
     .cricket{
+        -webkit-flex: 2;
+        flex: 2;
+
         display: flex;
         display: -webkit-flex;
+        width: 100%;
+        flex-direction: column;
+        padding-bottom: 1em;
+
+        > section {
+            padding: 1em;
+        }
     }
-
-	.cricket > section {
-	    padding: 1em;
-	}
-
+    .sound-info{
+        -webkit-flex: 1;
+        flex: 1;
+        padding: 1em;
+    }
 }
 
 @media (orientation:landscape){
@@ -36,18 +46,9 @@ body {
     /*When in landscape orientation all the sections the body are aligned side by side */
     body{
         padding-bottom: 3em;
-
-        .cricket {
-            flex-direction: column;
-            -webkit-flex-direction: column;
-
-            section {
-                flex: 1;
-                -webkit-flex: 1;
-            }
-        }
     }
 }
+
 
 @media (orientation:portrait){
     
@@ -57,12 +58,6 @@ body {
         -webkit-flex-direction: column;
         padding-bottom: 4em;
     }
-
-    body > section {
-    
-        // flex: 1;
-        // -webkit-flex: 1;
-    }   
 }
 
 /* might be usefull for the chripping anitmation of the cricket: */
