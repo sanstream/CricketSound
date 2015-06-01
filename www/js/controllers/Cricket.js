@@ -19,6 +19,20 @@ CricketSound.controller('Cricket',['$scope',
 			buttonText: "Make it chrip"	
 		};
 
+		var __maxDegreesOfMotion = 30;
+		var __coverShieldIsOpening = false;
+        var __frequency = 1000;
+
+        /**
+         *
+         */
+        function chirp () {
+            console.debug("move...");
+
+            if(!$scope.isSilent)
+                setTimeout(chirp, __frequency);
+        };
+
 		/**
 		 * [description]
 		 * @return {[type]} [description]
@@ -28,8 +42,10 @@ CricketSound.controller('Cricket',['$scope',
 			$scope.isSilent = false;
 			$scope.buttonText = whenActive.buttonText;	
 
+			// animate the cover shields:
+			chirp();
 			// call to cordova API to play sound.
-		};
+		}
 
 		/**
 		 * [description]
@@ -38,7 +54,7 @@ CricketSound.controller('Cricket',['$scope',
 		function stopChriping () {
 
 			$scope.isSilent = true;
-			$scope.buttonText = whenInActive.buttonText;	
+			$scope.buttonText = whenInActive.buttonText;
 
 			// call to cordova API to stop playing sound.
 		};
