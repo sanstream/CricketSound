@@ -20,22 +20,37 @@ CricketSound.controller('Cricket',['$scope',
 		};
 
 		const __maxDegreesOfMotion = 30;
-		var __coverShieldIsOpening = false;
-        const __frequency = 1000;
+        var __degreesOfMotion = 0;
+        var __coverShieldIsOpening = false;
+        const __animationDur = 100;
+        var __frontShield = null;
+        var __backShield = null;
+
+        $scope.degrees = __maxDegreesOfMotion;
+        $scope.isSilent = false;
+        $scope.buttonText = __whenActive.buttonText;
+        $scope.origin = {
+            x: 740,
+            y: 660
+        };
+        $scope.maxDegOfRotation = 3;
+        $scope.initDegOfRotation = 0;
+        $scope.animationDur = (__animationDur / 1000) + "s";
 
         /**
          * private chirp method that recursively calls itself until it needs to be silent.
          * @return {void}
          */
-        function chirp () {
-            console.debug("move...");
 
-            if(!$scope.isSilent)
-                setTimeout(chirp, __frequency);
-            else {
-                // turn off sound.
-            }
+        function initialize () {
+
+            __frontShield = document.getElementById('corver-shield-front-animation');
+            __backShield = document.getElementById('corver-shield-back');
+
+            startChirping();
+            console.log('deviceready triggered');
         }
+
 
 		/**
 		 * initiates the chirp method and sets the right values.
@@ -45,8 +60,11 @@ CricketSound.controller('Cricket',['$scope',
 
 			$scope.isSilent = false;
 			$scope.buttonText = __whenActive.buttonText;
+
+            console.debug(__frontShield);
+            __frontShield.beginElement();
+            __backShield.beginElement();
 			// animate the cover shields:
-			chirp();
 			// call to cordova API to play sound.
 		}
 
@@ -58,12 +76,16 @@ CricketSound.controller('Cricket',['$scope',
 
 			$scope.isSilent = true;
 			$scope.buttonText = __whenInActive.buttonText;
-
+            __frontShield.endElement();
+            __backShield.endElement();
 			// call to cordova API to stop playing sound.
 		}
 
 		// initiate the app with a chirping cricket:
-		startChirping();
+
+
+        document.addEventListener('deviceready',initialize, false);
+        document.addEventListener('DOMContentLoaded',console.debug, false);
 
 		/**
 		 * Handles the result of the toggling action of the in-page index button

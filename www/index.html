@@ -14,6 +14,7 @@
 
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/controllers/Cricket.js"></script>
+        <script type="text/javascript" src="js/controllers/SoundInfo.js"></script>
 
     </head>
     <body>
@@ -30,7 +31,7 @@
             <p>
                 <a ng-click='openPopUp' href="javascript:{}">Why is this app already making noise?</a>
             </p>
-            <article class="popup {{ popup.state }}" id="why-this-is-funny" ng-include="'templates/whys-this-is-funny.html'"></article> 
+            <article class="popup {{ state }}" id="why-this-is-funny" ng-include="'templates/whys-this-is-funny.html'"></article>
         </section>
 
         <footer>

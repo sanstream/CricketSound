@@ -71,11 +71,6 @@
        d="m 482.41766,800.2295 c 21.54023,3.54189 71.52168,-23.15993 96.45514,-30.74119 27.15304,-8.25613 65.88412,-19.99728 65.88412,-19.99728 0,0 3.37262,-4.94875 -22.77507,-6.65286 -13.07386,-0.85205 -72.01803,19.80996 -126.20649,27.08453 -7.15962,0.96115 -31.45975,27.33025 -13.3577,30.3068 z"
         />
     <path
-       class="bottom abdomen"
-       id="path4138"
-       d="m 648.51794,575.5702 c -119.19801,-32.82996 -383.32418,-29.9151 -475.78185,18.18275 -15.29796,7.95822 18.19394,72.59643 127.27922,129.29952 47.50873,24.69528 232.83456,45.90295 338.3969,22.46322 105.56234,-23.43973 50.89659,-158.71072 10.10573,-169.94549 z"
-        />
-    <path
        id="path4868"
        class="general-body-part"
        d="m 93.944187,545.26562 c 0,0 44.957403,50.39122 80.812203,69.70053 35.8548,19.30931 42.39555,-19.87063 7.07107,-27.27412 -35.32448,-7.40349 -87.883273,-42.42641 -87.883273,-42.42641 z"
@@ -89,6 +84,11 @@
        id="path4868-9"
        class="general-body-part"
        d="m 14.183136,585.21287 c 0,0 132.335594,37.76431 174.756384,31.81981 42.42079,-5.9445 33.55671,-23.15363 -4.29315,-23.48605 -37.84986,-0.33242 -170.463234,-8.33376 -170.463234,-8.33376 z"
+        />
+    <path
+       class="bottom abdomen"
+       id="path4138"
+       d="m 648.51794,575.5702 c -119.19801,-32.82996 -383.32418,-29.9151 -475.78185,18.18275 -15.29796,7.95822 18.19394,72.59643 127.27922,129.29952 47.50873,24.69528 232.83456,45.90295 338.3969,22.46322 105.56234,-23.43973 50.89659,-158.71072 10.10573,-169.94549 z"
         />
     <path
        id="path4896-0-8-2"
@@ -116,17 +116,49 @@
        d="m 704.90818,588.44013 c -102.76054,7.33193 -121.6903,169.80988 -3.33301,183.84215 114.86033,-24.14764 137.06769,-168.774 3.33301,-183.84215 z"
         />
     <path
-       class="cover-shield-front general-body-part"
-       id="path4834"
-       transform="rotate({{ degrees }})"
-       d="M 771.75654,608.94585 C 567.51531,499.67951 171.06382,561.47945 165.66502,588.74279 c -6.85018,34.59267 521.4771,36.94221 607.10168,44.44672 22.59625,1.98043 45.00195,0.37221 -1.01016,-24.24366 z"
-        />
-    <path
        class="cover-shield-back general-body-part"
-       id="path4834-1"
-       transform="rotate({{ degrees }})"
+       id="corver-shield-back"
+       transform ="rotate(0)"
+       d="M 771.75654,608.94585 C 567.51531,499.67951 171.06382,561.47945 165.66502,588.74279 c -6.85018,34.59267 521.4771,36.94221 607.10168,44.44672 22.59625,1.98043 45.00195,0.37221 -1.01016,-24.24366 z"
+        >
+        <animateTransform
+            id="corver-shield-back-animation"
+            dur="{{ animationDur }}"
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            from="{{ initDegOfRotation }} {{origin.x}} {{origin.y}}"
+            to="{{ initDegOfRotation }} {{origin.x}} {{origin.y}}"
+            values="
+                {{ initDegOfRotation }} {{origin.x}} {{origin.y}};
+                {{ maxDegOfRotation }} {{origin.x}} {{origin.y}};
+                {{ initDegOfRotation }} {{origin.x}} {{origin.y}}
+            "
+            repeatCount="indefinite"
+         />
+     </path>
+    <path
+       class="cover-shield-front general-body-part"
+       transform =""
+       id="corver-shield-front"
        d="M 774.86447,633.68321 C 570.15335,528.85625 170.73799,565.51549 163.80878,592.43059 c -8.792,34.15082 266.02206,145.11249 589.48251,94.80907 22.41341,-3.48565 68.02051,-29.77203 21.57318,-53.55645 z"
-        />
+        >
+        <animateTransform
+            id="corver-shield-front-animation"
+            dur="{{ animationDur }}"
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            from="{{ initDegOfRotation }} {{origin.x}} {{origin.y}}"
+            to="{{ initDegOfRotation }} {{origin.x}} {{origin.y}}"
+            values="
+                {{ initDegOfRotation }} {{origin.x}} {{origin.y}};
+                {{ maxDegOfRotation }} {{origin.x}} {{origin.y}};
+                {{ initDegOfRotation }} {{origin.x}} {{origin.y}}
+            "
+            repeatCount="indefinite"
+         />
+        </path>
     <path
        id="path4142"
        class="general-body-part"
