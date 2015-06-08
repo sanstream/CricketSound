@@ -22,6 +22,9 @@ gen/
 #All the platform specific stuff...for now.
 platforms/
 
+# all plugins:
+plugins/
+
 # Local configuration file (sdk path, etc)
 local.properties
 
