@@ -7,26 +7,25 @@
 CricketSound.controller('Cricket',['$scope',
  	function ($scope){
 
+
+		// private variables:
 		const __whenActive = {
 			buttonText: "Make it Stop!"
 		};
-
-		/**
-		 * [inactive description]
-		 * @type {Object}
-		 */
 		const __whenInActive = {
 			buttonText: "Make it chrip"	
 		};
-
 		const __maxDegreesOfMotion = 30;
+        const __animationDur = 100;
+
         var __degreesOfMotion = 0;
         var __coverShieldIsOpening = false;
-        const __animationDur = 100;
+
         var __frontShield = null;
         var __backShield = null;
 
-        $scope.degrees = __maxDegreesOfMotion;
+        //public variables:
+	    $scope.degrees = __maxDegreesOfMotion;
         $scope.isSilent = false;
         $scope.buttonText = __whenActive.buttonText;
         $scope.origin = {
@@ -61,7 +60,6 @@ CricketSound.controller('Cricket',['$scope',
 			$scope.isSilent = false;
 			$scope.buttonText = __whenActive.buttonText;
 
-            console.debug(__frontShield);
             __frontShield.beginElement();
             __backShield.beginElement();
 			// animate the cover shields:
