@@ -4,6 +4,8 @@
  * @copyright 	Sanstream Creations 2015  
  */
 
+soundDuration = 5320; // milliseconds
+
 CricketSound.controller('Cricket',['$scope',
  	function ($scope){
 
@@ -23,6 +25,11 @@ CricketSound.controller('Cricket',['$scope',
 
         var __frontShield = null;
         var __backShield = null;
+
+        var __sound = null;
+        var __repeatSound = null;
+
+        var self = this;
 
         //public variables:
 	    $scope.degrees = __maxDegreesOfMotion;
@@ -44,12 +51,20 @@ CricketSound.controller('Cricket',['$scope',
         function initialize () {
 
             __frontShield = document.getElementById('corver-shield-front-animation');
-            __backShield = document.getElementById('corver-shield-back');
-
+            __backShield = document.getElementById('corver-shield-back-animation');
+            var androidPath = "/android_assets/www/";
+            self.__sound = new Media("sounds/cricket-sound.mp3", whenAudioLoaded, whenAudioInError);
+            console.debug("sound duration: ",soundDuration);
             startChirping();
-            console.log('deviceready triggered');
         }
 
+        function whenAudioLoaded (reponse) {
+        	console.debug(reponse);
+        }
+
+        function whenAudioInError (reponse) {
+        	console.debug(reponse);	
+        }
 
 		/**
 		 * initiates the chirp method and sets the right values.
@@ -64,6 +79,11 @@ CricketSound.controller('Cricket',['$scope',
             __backShield.beginElement();
 			// animate the cover shields:
 			// call to cordova API to play sound.
+			self.__sound.play();
+
+			if(!__repeatSound) __repeatSound = setInterval(function () {
+				self.__sound.play();
+			}, soundDuration);
 		}
 
 		/**
@@ -77,6 +97,9 @@ CricketSound.controller('Cricket',['$scope',
             __frontShield.endElement();
             __backShield.endElement();
 			// call to cordova API to stop playing sound.
+			self.__sound.pause();
+			clearInterval(__repeatSound);
+            __repeatSound = null;
 		}
 
 		// initiate the app with a chirping cricket:
