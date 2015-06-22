@@ -1,0 +1,38 @@
+$levelOfPopup: 10;
+
+
+.sound-info {
+	
+	article.popup {
+		width: 90%;
+		height: 90%;
+		background-color: #FDFFF2;
+		padding: 0 1em;
+		position: absolute;
+		top: 5%;
+		left: 5%;
+		z-index: $levelOfPopup;
+		overflow: auto;
+	}
+
+	div.overlay[data-is-popup-open="true"]{
+		// an overlay for the popup:
+		content: "";
+		position: absolute;
+		z-index: $levelOfPopup - 1; // Show the overlay just below the popup.
+		opacity: 0.75;
+		background-color: #4A4949;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+	}
+
+	article.popup[data-is-popup-open="true"]{
+		display: block;
+	}
+
+	article.popup[data-is-popup-open="false"]{
+		display: none;
+	}
+}

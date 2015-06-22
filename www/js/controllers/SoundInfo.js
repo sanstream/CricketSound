@@ -7,18 +7,16 @@
 CricketSound.controller('SoundInfo',['$scope',
  	function ($scope){
 
-        $scope.state = 'open';
-
- 		$scope.popup.state = 'closed';
+        $scope.popupOpen = false;
 
  		$scope.openPopUp= function () {
 
- 			$scope.popup.state = 'open';
+ 			$scope.popupOpen = true;
  		};
 
  		$scope.closePopUp = function () {
 
- 			$scope.popup.state = 'closed';
+ 			$scope.popupOpen = false;
  		};
  	}
  ]);

@@ -53,7 +53,7 @@ CricketSound.controller('Cricket',['$scope',
             __frontShield = document.getElementById('corver-shield-front-animation');
             __backShield = document.getElementById('corver-shield-back-animation');
 
-            self.__sound = new Media("/android_assets/www/sounds/cricket-sound.mp3", whenAudioLoaded, whenAudioInError);
+            self.__sound = new Media("sounds/cricket-sound.mp3", whenAudioLoaded, whenAudioInError);
             console.debug("sound duration: ",soundDuration);
             startChirping();
         }
