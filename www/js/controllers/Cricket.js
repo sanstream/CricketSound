@@ -53,7 +53,13 @@ CricketSound.controller('Cricket',['$scope',
             __frontShield = document.getElementById('corver-shield-front-animation');
             __backShield = document.getElementById('corver-shield-back-animation');
 
-            self.__sound = new Media("/android_assets/www/sounds/cricket-sound.mp3", whenAudioLoaded, whenAudioInError);
+            console.debug(window.location.pathname);
+
+            self.__sound = new Media("/sounds/cricket-sound.mp3",
+            	whenAudioLoaded,
+            	whenAudioInError,
+            	mediaEventHandler
+            );
             console.debug("sound duration: ",soundDuration);
             startChirping();
         }
@@ -64,6 +70,13 @@ CricketSound.controller('Cricket',['$scope',
 
         function whenAudioInError (reponse) {
         	console.debug(reponse);	
+        }
+
+        function mediaEventHandler (status) {
+        	console.debug('handling sound, status :',status, Media.MEDIA_STOPPED);
+        	if(status === Media.MEDIA_STOPPED){
+        		self.__sound.play();
+        	}
         }
 
 		/**
@@ -81,10 +94,10 @@ CricketSound.controller('Cricket',['$scope',
 			// call to cordova API to play sound.
 			self.__sound.play();
 
-			__repeatSound = setInterval(function() {
-			 	self.__sound.play();
-			 	//console.log("chrip sound simulation...");
-			}, soundDuration);
+			// __repeatSound = setInterval(function() {
+			//  	self.__sound.play();
+			//  	//console.log("chrip sound simulation...");
+			// }, soundDuration);
 		}
 
 		/**
@@ -98,8 +111,8 @@ CricketSound.controller('Cricket',['$scope',
             __frontShield.endElement();
             __backShield.endElement();
 			// call to cordova API to stop playing sound.
-			self.__sound.stop();
-			clearInterval(__repeatSound);
+			self.__sound.pause();
+			//clearInterval(__repeatSound);
             __repeatSound = null;
 		}
 
