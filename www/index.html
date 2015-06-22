@@ -29,9 +29,12 @@
             
         <section class="sound-info" ng-controller="SoundInfo">
             <p>
-                <a ng-click='openPopUp' href="javascript:{}">Why is this app already making noise?</a>
+                <a ng-click='openPopUp()' href="javascript:{}">Why is this app already making noise?</a>
             </p>
-            <article class="popup {{ state }}" id="why-this-is-funny" ng-include="'templates/whys-this-is-funny.html'"></article>
+            
+            <div class="overlay" data-is-popup-open="{{ popupOpen }}"></div>
+
+            <article class="popup" id="why-this-is-funny" data-is-popup-open="{{ popupOpen }}" ng-include="'templates/whys-this-is-funny.html'"></article>
         </section>
 
         <footer>
