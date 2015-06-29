@@ -4,7 +4,7 @@
  * @copyright 	Sanstream Creations 2015  
  */
 
-soundDuration = 5320; // milliseconds
+soundDuration = 1200; // milliseconds
 
 CricketSound.controller('Cricket',['$scope',
  	function ($scope){
@@ -53,13 +53,9 @@ CricketSound.controller('Cricket',['$scope',
             __frontShield = document.getElementById('corver-shield-front-animation');
             __backShield = document.getElementById('corver-shield-back-animation');
 
-            self.__sound = new Media("sounds/cricket-sound.mp3", whenAudioLoaded, whenAudioInError);
+            self.__sound = new Media("/android_asset/www/sounds/cricket-sound.mp3", null, whenAudioInError);
             console.debug("sound duration: ",soundDuration);
             startChirping();
-        }
-
-        function whenAudioLoaded (reponse) {
-        	console.debug(reponse);
         }
 
         function whenAudioInError (reponse) {
@@ -83,7 +79,7 @@ CricketSound.controller('Cricket',['$scope',
 
 			__repeatSound = setInterval(function() {
 			 	self.__sound.play();
-			 	//console.log("chrip sound simulation...");
+			 	console.debug(Date.now(),"playing sound again...");
 			}, soundDuration);
 		}
 
